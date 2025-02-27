@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGPD - Pesquisa</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./css/img/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Para que serve?</a></li>
+                <li><a href="#principios">Consentimento</a></li>
+                <li><a href="#direitos">Direitos</a></li>
+                <li><a href="#bibliografia">Bibliografia</a></li>
+                <li class="modo"><a onclick="toggleDarkMode()">Alternar Modo Escuro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="inicio">
+        <div class="text-content">
+            <h1 class="title">Lei Geral de Proteção de Dados (LGPD)</h1>
+            <p>A Lei Geral de Proteção de Dados Pessoais (LGPD), Lei n° 13.709/2018, foi promulgada para
+                proteger os direitos fundamentais de liberdade e de privacidade,
+                e a livre formação da personalidade de cada indivíduo.
+                A Lei fala sobre o tratamento de dados pessoais, dispostos em meio físico ou digital, feito por
+                pessoa física ou jurídica de direito público ou privado, englobando um amplo conjunto de operações
+                que podem ocorrer em meios manuais ou digitais. Quer saber mais? Clique no botão abaixo!
+            </p>
+            <button id="btn-section" onclick="scrollToSobre()">Saiba Mais</button>
+        </div>
+        <img src="./css/img/lgpd.png">
+    </section>
+
+    <section id="sobre">
+        <h1>Para que serve a LGPD?</h1>
+        <p>A LGPD (Lei Geral de Proteção de Dados) serve para proteger a privacidade e os dados pessoais dos cidadãos,
+            garantindo mais segurança, transparência e controle sobre o uso dessas informações por empresas e órgãos
+            públicos.
+
+            Ela estabelece regras claras sobre como os dados devem ser coletados, armazenados, processados e
+            compartilhados, prevenindo abusos e vazamentos. Além disso, dá aos indivíduos o direito de acessar, corrigir
+            ou até excluir seus dados pessoais, garantindo maior autonomia sobre suas informações.</p>
+    </section>
+
+    <section id="principios">
+        <h1>Consentimento</h1>
+        <p>Um dos elementos essencias da LGPD é o consentir. Ou seja, o consentimento do cidadão é a base para que dados
+            pessoais possam ser tratados. Mas há algumas exceções a isso. É possível tratar dados sem consentimento se
+            isso for indispensável para: cumprir uma obrigação legal; executar política pública prevista em lei;
+            realizar estudos via órgão de pesquisa; executar contratos; defender direitos em processo; preservar a vida
+            e a integridade física de uma pessoa; tutelar ações feitas por profissionais das áreas da saúde ou
+            sanitária; prevenir fraudes contra o titular; proteger o crédito; ou atender a um interesse legítimo, que
+            não fira direitos fundamentais do cidadão.</p>
+    </section>
+
+
+    <section id="direitos">
+        <h1>Direitos</h1>
+        <p>Os direito da LGPD garantem mais transparência e controle sobre o uso dessas informações. Esses direitos são
+            fundamentais para
+            proteger a privacidade dos cidadãos e estabelecer regras claras para empresas e organizações que lidam com
+            dados pessoais.</p>
+    </section>
+
+    <section id="bibliografia">
+        <h1>Bibliografia</h1>
+        <p>GOV.BR. Lei Geral de Proteção de Dados Pessoais (LGPD). Disponível em: <a href="https://www.gov.br/esporte/pt-br/acesso-a-informacao/lgpd" target="_blank">GOV BR LGPD</a>
+        </p>
+        <p>O que muda com a LGPD — LGPD - Lei Geral de Proteção de Dados Pessoais | Serpro. Disponível em: <a href="https://www.serpro.gov.br/lgpd/menu/a-lgpd/o-que-muda-com-a-lgpd" target="_blank">Serpro</a> ‌</p>
+        <p>LGPD - LEI GERAL DE PROTEÇÃO DE DADOS PESSOAIS
+            EM TECNOLOGIA DA INFORMAÇÃO: Disponível na revista CESMAC:
+            <a href="./download/document.pdf" download>CESMAC - LGPD</a></p>
+        <p>Lei Geral da Proteção de Dados e suas repercuções no Direito Brasileiro - THOMSON REUTERS 
+            <a href="./download/LEI_GERAL_DE_PROTECAO_DE_DADOS_PESSOAIS.pdf" download>LGPD e suas repercuções - Thomson Reuters</a>
+        </p>
+    </section>
+
+    <script>
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function handleScroll() {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add("visible");
+                }
+            });
+        }
+
+        function scrollToSobre() {
+            const sectionSobre = document.getElementById("sobre");
+            sectionSobre.scrollIntoView({ behavior: "smooth" });
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+    </script>
+</body>
+
+</html>
