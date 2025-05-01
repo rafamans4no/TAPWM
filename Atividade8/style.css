@@ -1,0 +1,90 @@
+body {
+    background-image: url(pic.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.botoes button {
+    background-color: #fff;
+    color: #ff9aba;
+    border: 2px solid #ff9aba;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.botoes button:hover {
+    background-color: #fec7d9;
+    color: white;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button.executar {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4375;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.executar:hover {
+    background-color: #ff4375;
+}
+
+.resultado {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f4ff;
+    border-radius: 8px;
+    border-left: 4px solid #ff4375;
+    color: #333;
+    font-weight: bold;
+}
