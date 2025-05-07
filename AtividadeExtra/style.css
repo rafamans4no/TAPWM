@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Indie+Flower&display=swap');
+
+body {
+  font-family: 'Quicksand', 'Indie Flower', cursive;
+  background: linear-gradient(to bottom right, #ffe6f0, #fff5fb);
+  padding: 20px;
+}
+
+h2 {
+  color: #ff69b4;
+  font-family: 'Indie Flower'   ;
+  font-size: 26px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.5);
+  border: 2px dashed #ffb6c1;
+}
+
+label {
+  color: #d63384;
+  font-size: 16px;
+}
+
+input, button {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #ffb6c1;
+  font-family: 'Quicksand', sans-serif;
+}
+
+input {
+  width: 60%;
+  background: #fff;
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e754a3;
+  transform: scale(1.05);
+}
+
+.resultado {
+  margin-top: 15px;
+  background: #ffffff;
+  padding: 12px;
+  font-weight: bold;
+  color: #b03060;
+  font-size: 17px;
+}
