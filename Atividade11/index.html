@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atividade 11</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Atividade 11</h1>
+
+  <section>
+    <h2>1. Cálculo de Área do Retângulo</h2>
+    <label>Base: <input type="number" id="base" /></label>
+    <label>Altura: <input type="number" id="altura" /></label>
+    <button onclick="calcularArea()">Calcular Área</button>
+    <p id="resultadoArea"></p>
+  </section>
+
+  <section>
+    <h2>2. Contas Bancárias</h2>
+    <h3>Conta Corrente</h3>
+    <label>Nome: <input type="text" id="nomeCorrente" /></label>
+    <label>Banco: <input type="text" id="bancoCorrente" /></label>
+    <label>Número da Conta: <input type="text" id="numeroCorrente" /></label>
+    <label>Saldo: <input type="number" id="saldoCorrente" /></label>
+    <label>Saldo Especial: <input type="number" id="saldoEspecial" /></label>
+    <button onclick="criarCorrente()">Criar Conta Corrente</button>
+    <p id="resultadoCorrente"></p>
+
+    <h3>Conta Poupança</h3>
+    <label>Nome: <input type="text" id="nomePoupanca" /></label>
+    <label>Banco: <input type="text" id="bancoPoupanca" /></label>
+    <label>Número da Conta: <input type="text" id="numeroPoupanca" /></label>
+    <label>Saldo: <input type="number" id="saldoPoupanca" /></label>
+    <label>Juros: <input type="number" id="juros" /></label>
+    <label>Data de Vencimento: <input type="date" id="dataVencimento" /></label>
+    <button onclick="criarPoupanca()">Criar Conta Poupança</button>
+    <p id="resultadoPoupanca"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
