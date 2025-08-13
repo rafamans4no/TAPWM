@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário - Atividade 14</title>
+<link rel="stylesheet" href="style.css">
+<script>
+function validar() {
+    var form = document.formulario;
+    var nome = form.elements["nome"].value.trim();
+    var email = form.elements["email"].value.trim();
+    var comentario = form.elements["comentario"].value.trim();
+    var pesquisa = form.elements["pesquisa"];
+    var visita = null;
+
+    if (nome.length < 10) {
+        alert("O Nome deve ter no mínimo 10 caracteres.");
+        return false;
+    }
+
+    if (email === "") {
+        alert("O campo E-mail é obrigatório.");
+        return false;
+    }
+
+    if (comentario.length < 20) {
+        alert("O Comentário deve ter no mínimo 20 caracteres.");
+        return false;
+    }
+
+    for (var i = 0; i < pesquisa.length; i++) {
+        if (pesquisa[i].checked) {
+            visita = pesquisa[i].value;
+            break;
+        }
+    }
+
+    if (!visita) {
+        alert("Por favor, responda à pesquisa.");
+        return false;
+    }
+
+    if (visita === "nao") {
+        alert("Que bom que você voltou a visitar esta página!");
+    } else {
+        alert("Volte sempre à esta página!");
+    }
+
+    return true;
+}
+</script>
+</head>
+<body>
+
+<h1>Formulário 🌷</h1>
+
+<form name="formulario" onsubmit="return validar()">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome">
+
+    <label for="email">E-mail:</label>
+    <input type="email" name="email">
+
+    <label for="comentario">Comentário:</label>
+    <textarea name="comentario" rows="4"></textarea>
+
+    <label>Pesquisa:</label>
+    Primeira vez nesta página??
+    <br>
+    <input type="radio" name="pesquisa"> Sim
+    <input type="radio" name="pesquisa"> Não
+    <br><br>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+</form>
+
+</body>
+</html>

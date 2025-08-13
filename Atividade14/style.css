@@ -1,0 +1,65 @@
+body {
+    background-color: #ffe6f0;
+    font-family: "Comic Sans MS", "Poppins", cursive, sans-serif;
+    text-align: center;
+    padding: 50px;
+    color: #ff66a3;
+}
+
+h1 {
+    color: #ff4d94;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #ff66a3;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #ff99c8;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px;
+    box-shadow: 2px 2px 5px #ffb3cc;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff66a3;
+}
+
+form {
+    background-color: #ffffff90;
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: left;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin: 0 5px;
+}
